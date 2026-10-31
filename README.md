@@ -4,7 +4,7 @@ Proyecto educativo de **José Luis Ronquillo Quintanar**, desarrollado en el Spr
 
 Se revisan problemas de calidad, distribuciones, valores atípicos y reglas de segmentación. Cada fila es una orden; los resultados no equivalen a clientes únicos.
 
-[![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/jluisrq5/everpeak-analysis/blob/main/everpeak_analysis.ipynb)
+[![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/jluisrq5/everpeak-analysis/blob/main/notebooks/everpeak_analysis.ipynb)
 
 ## Resultados principales
 
@@ -27,7 +27,7 @@ El total original de importes de 2024 es **50,203,903**. Limitar al percentil 99
 ## Archivos
 
 ```text
-everpeak_analysis.ipynb    Notebook con tablas, gráficos, decisiones y código
+notebooks/everpeak_analysis.ipynb    Notebook con tablas, gráficos, decisiones y código
 analysis.py               Pipeline para recalcular con el CSV autorizado
 results_aggregate.json    Resultados agregados calculados en TripleTen
 requirements.txt          Bibliotecas del análisis
@@ -37,6 +37,8 @@ reports/                  Gráficos del notebook
 ## Cómo reproducirlo
 
 **Ver y ejecutar las tablas y gráficos:** abre el botón de Colab y ejecuta las celdas en orden. Este modo utiliza los agregados publicados. También puedes descargar el repositorio y abrir el notebook localmente.
+
+El notebook incluye el número y porcentaje de datos faltantes por columna antes de limpiar. Los marcadores inválidos requieren comprobaciones adicionales; no se confunden con ausentes detectados por `isna()`.
 
 **Recalcular desde los registros originales:** obtén `everpeak_retail.csv` mediante tu acceso autorizado al curso, colócalo en `data/` y activa `RECALCULAR = True` en el notebook. Por terminal:
 
